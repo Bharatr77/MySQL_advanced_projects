@@ -1,20 +1,30 @@
-# MySQL_advanced_projects
-This repository contains MySQL queries and explanations covering advanced concepts, including window functions, subqueries, and ranking.
+#LogiSQL: Logistics & Shipment Analytics System 🚚#
 
-Topics Covered
-1. *Window Functions*
-    - ROW_NUMBER()
-    - RANK()
-    - DENSE_RANK()
-    - LAG() and LEAD()
-2. *Subqueries*
-    - Correlated subqueries
-    - Uncorrelated subqueries
-3. *Ranking and Top N Queries*
-    - Get top N records per group
-    - Rank employees by salary
+## 📌 Project Overview
+This project focuses on designing and analyzing a comprehensive **Logistics Management Database**. It involves managing complex relationships between employees, shipments, clients, payments, and memberships. The goal is to transform raw operational data into actionable business insights using SQL.
 
-Queries
-- `SELECT *, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num FROM employees;` - Assign a row number
-- `SELECT *, RANK() OVER (ORDER BY salary DESC) AS salary_rank FROM employees;` - Rank employees by salary
-- `SELECT * FROM employees WHERE salary IN (SELECT MAX(salary) FROM employees GROUP BY department);` - Get employees with max salary per department
+## 🛠️ Tech Stack & Skills
+* **Database:** MySQL / PostgreSQL
+* **Advanced SQL Techniques:**
+    * **Joins:** Complex multi-table Inner Joins.
+    * **Window Functions:** `DENSE_RANK()`, `SUM() OVER()`, `AVG() OVER()`.
+    * **DDL/DML:** Table creation, View management, and Data cleaning (Updates/Alters).
+    * **Analytics:** Date manipulation (`DATEDIFF`), percentage contribution, and subqueries.
+
+## 📊 Database Architecture
+The project utilizes a centralized `logistics` table (denormalized view) derived from the following entities:
+* **Employee:** Staff details, branches, and designations.
+* **Shipment:** Parcel content, weight, and addresses.
+* **Client:** Customer demographics and contact info.
+* **Status:** Tracking sent and delivery dates.
+* **Payment:** Transaction amounts and modes.
+* **Membership:** Client loyalty and tenure data.
+
+## 🚀 Key Insights & Queries
+Some of the critical business questions solved in this project include:
+1.  **Revenue Analysis:** Calculating the percentage contribution of each payment mode.
+2.  **Operational Efficiency:** Identifying next-day deliveries and ranking service type preferences.
+3.  **Customer Loyalty:** Extracting clients with over 10 years of membership tenure.
+4.  **Staff Performance:** Ranking employees based on the total weight of shipments managed.
+5.  **Regional Management:** Handling branch shutdowns (NY to NJ) and applying regional discounts (Texas branch).
+
