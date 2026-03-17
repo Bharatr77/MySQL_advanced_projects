@@ -1,9 +1,9 @@
-#LogiSQL: Logistics & Shipment Analytics System 🚚#
+#LogiSQL: Logistics & Shipment Analytics System#
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on designing and analyzing a comprehensive **Logistics Management Database**. It involves managing complex relationships between employees, shipments, clients, payments, and memberships. The goal is to transform raw operational data into actionable business insights using SQL.
 
-## 🛠️ Tech Stack & Skills
+##  Tech Stack & Skills
 * **Database:** MySQL / PostgreSQL
 * **Advanced SQL Techniques:**
     * **Joins:** Complex multi-table Inner Joins.
@@ -11,7 +11,7 @@ This project focuses on designing and analyzing a comprehensive **Logistics Mana
     * **DDL/DML:** Table creation, View management, and Data cleaning (Updates/Alters).
     * **Analytics:** Date manipulation (`DATEDIFF`), percentage contribution, and subqueries.
 
-## 📊 Database Architecture
+## Database Architecture
 The project utilizes a centralized `logistics` table (denormalized view) derived from the following entities:
 * **Employee:** Staff details, branches, and designations.
 * **Shipment:** Parcel content, weight, and addresses.
@@ -20,7 +20,7 @@ The project utilizes a centralized `logistics` table (denormalized view) derived
 * **Payment:** Transaction amounts and modes.
 * **Membership:** Client loyalty and tenure data.
 
-## 🚀 Key Insights & Queries
+## Key Insights & Queries
 Some of the critical business questions solved in this project include:
 1.  **Revenue Analysis:** Calculating the percentage contribution of each payment mode.
 2.  **Operational Efficiency:** Identifying next-day deliveries and ranking service type preferences.
